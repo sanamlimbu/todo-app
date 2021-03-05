@@ -2,8 +2,6 @@ import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 import { useState } from "react";
 
-import "bootstrap/dist/css/bootstrap.css";
-
 const App = () => {
   const [taskList, setTaskList] = useState([]);
   const appendTaskToList = (task) => {
@@ -11,6 +9,7 @@ const App = () => {
   };
   return (
     <div className="container">
+      <span className="title">Todo App</span>
       <TaskForm appendTaskToList={appendTaskToList} />
       <TaskList taskList={taskList} />
     </div>

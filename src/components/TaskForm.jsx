@@ -10,8 +10,8 @@ const TaskForm = ({ appendTaskToList }) => {
   };
 
   return (
-    <div className="container">
-      <form align="center" onSubmit={handleSubmit}>
+    <div>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Add task"
@@ -19,9 +19,8 @@ const TaskForm = ({ appendTaskToList }) => {
           onChange={(e) => setTaskTitle(e.target.value)}
           required
         />
-
-        <button type="submit" className="btn btn-info">
-          +
+        <button type="submit">
+          <span>+</span>
         </button>
       </form>
     </div>

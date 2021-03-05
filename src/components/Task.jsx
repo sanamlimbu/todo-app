@@ -1,9 +1,5 @@
 const Task = ({ title, ...rest }) => {
-  return (
-    <div className="container">
-      <li className="list-group-item">{title}</li>
-    </div>
-  );
+  return <div className="task">{title}</div>;
 };
 
 export default Task;
