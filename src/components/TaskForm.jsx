@@ -1,26 +1,31 @@
 import { useState } from "react";
 
-const TaskForm = ({ appendTaskToList }) => {
+const TaskForm = ({ addTaskToList }) => {
   const [taskTitle, setTaskTitle] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    appendTaskToList({ id: new Date().getUTCMilliseconds(), title: taskTitle });
+    addTaskToList({
+      id: new Date().getUTCMilliseconds(),
+      title: taskTitle,
+      isCompleted: false,
+    });
     setTaskTitle("");
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="container">
+      <form className="task-form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Add task"
           value={taskTitle}
           onChange={(e) => setTaskTitle(e.target.value)}
           required
+          className="task-input"
         />
-        <button type="submit">
-          <span>+</span>
+        <button className="btn save-btn" type="submit">
+          +
         </button>
       </form>
     </div>

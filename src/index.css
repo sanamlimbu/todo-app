@@ -4,52 +4,85 @@ body {
   font-weight: lighter;
   text-align: center;
 }
-.container {
+.main {
   margin: auto;
-  border: 2px solid lightblue;
+  border: 2px solid #ccc;
   text-align: center;
-  width: 60%;
+  width: 40%;
   align-self: center;
   border-radius: 5px;
 }
-.taskform {
-  display: block;
-  text-align: center;
-}
-.tasklist {
+
+.container {
   align-content: center;
   margin-left: 16px;
   margin-right: 16px;
 }
-.task {
-  background-color: aliceblue;
-  width: 100%;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
 
-.title {
+.app-title {
   font-size: larger;
   font-weight: bold;
   color: lightcoral;
 }
-input {
-  width: 80%;
-  padding: 10px 16px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+.total-task {
+  color: lightcoral;
+  margin-left: 1rem;
+  font-size: medium;
+  font-weight: bold;
 }
-button {
-  background-color: lightseagreen;
-  width: 10%;
-  padding: 8px 16px;
-  margin: 8px;
-  display: inline-block;
+.task-form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  width: 100%;
+  margin: 8px 0;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+.task-input {
+  padding: 0.5em;
+  margin: 0.1em 0.2em;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  display: inline-block;
+  flex-grow: 1;
+}
+.task {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  width: 100%;
+  margin: 8px 0;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+.btn {
+  width: 10%;
+  padding: 0.2em;
+  margin: 0.1em 0.2em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: white;
+  display: inline-block;
+}
+.save-btn {
+  background-color: green;
+  width: 20%;
+}
+.done-btn {
+  background-color: blue;
+}
+.delete-btn {
+  background-color: red;
+}
+.task-title {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 0.2em;
+  margin: 0.1em 0.2em;
+  flex-grow: 1;
+  background-color: #ccc;
+  font-size: large;
 }
